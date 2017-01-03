@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec -it makeradmin-tictail /usr/local/bin/php artisan $*
+docker exec -it makeradmin-tictail /usr/bin/php /var/www/html/artisan $*
