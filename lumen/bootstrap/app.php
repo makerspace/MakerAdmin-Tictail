@@ -98,4 +98,8 @@ $app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
 	require __DIR__.'/../routes/web.php';
 });
 
+$app->singleton('filesystem', function ($app) {
+	return $app->loadComponent('filesystems', 'Illuminate\Filesystem\FilesystemServiceProvider', 'filesystem');
+});
+
 return $app;
