@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
 	protected $commands = [
 		Commands\ServiceRegister::class,
 		Commands\ServiceUnregister::class,
+		Commands\TictailDownload::class,
 	];
 
 	/**

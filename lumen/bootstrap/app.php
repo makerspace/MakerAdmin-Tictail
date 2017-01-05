@@ -25,8 +25,9 @@ $app = new Laravel\Lumen\Application(
 
 $app->withFacades();
 
-// Load configuration file
+// Load configuration files
 $app->configure("service");
+$app->configure("tictail");
 
 /*
 |--------------------------------------------------------------------------

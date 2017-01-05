@@ -11,6 +11,7 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get("tictail/overview",   "Tictail@overview");
+$app->get("tictail/download",   "Tictail@download");
+$app->get("tictail/all",        "Tictail@all");
+$app->get("tictail/order/{id}", "Tictail@order");
