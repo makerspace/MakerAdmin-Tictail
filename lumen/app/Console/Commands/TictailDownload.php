@@ -30,24 +30,24 @@ class TictailDownload extends Command
 	 */
 	public function fire()
 	{
-		$this->info("Tictail download");
+// 		$this->info("Tictail download");
 
-		$tictail = new TictailAPI();
+// 		$tictail = new TictailAPI();
 
-		if(!empty(config("tictail.bearer")))
-		{
-			// Use bearer
-			$tictail->setBearer(config("tictail.bearer"));
-		}
-		else
-		{
-			// Login and get a new bearer
-			$tictail->Login(config("tictail.username"), config("tictail.password"));
-		}
+// 		if(!empty(config("tictail.bearer")))
+// 		{
+// 			// Use bearer
+// 			$tictail->setBearer(config("tictail.bearer"));
+// 		}
+// 		else
+// 		{
+// 			// Login and get a new bearer
+// 			$tictail->Login();
+// 		}
 
-		// Select store
-		$tictail->setStore(config("tictail.store"));
+// 		// Select store
+// 		$tictail->setStore(config("tictail.store"));
 
-		$orders = $tictail->downloadAll();
+// 		$orders = $tictail->downloadAll();
 	}
 }

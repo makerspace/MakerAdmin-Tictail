@@ -87,19 +87,6 @@ class Tictail extends Controller
 	protected function _login()
 	{
 		$tictail = new TictailAPI();
-
-		if(!empty(config("tictail.bearer")))
-		{
-			// Use bearer
-			$tictail->setBearer(config("tictail.bearer"));
-		}
-		else
-		{
-			// Login and get a new bearer
-			$tictail->Login(config("tictail.username"), config("tictail.password"));
-		}
-
-		// Select store
 		$tictail->setStore(config("tictail.store"));
 
 		return $tictail;
